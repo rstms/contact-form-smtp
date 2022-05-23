@@ -15,7 +15,9 @@ log_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 @click.command("contactform")
 @click.version_option(message=header)
 @click.option("-d", "--debug", is_flag=True, help="debug mode")
-@click.option("-h", "--host", type=str, default="0.0.0.0", help="listen address")
+@click.option(
+    "-h", "--host", type=str, default="0.0.0.0", help="listen address"
+)
 @click.option("-p", "--port", type=int, default="8080", help="listen port")
 @click.option(
     "-l",
