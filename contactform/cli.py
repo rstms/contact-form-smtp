@@ -3,16 +3,27 @@
 import sys
 
 import click
+import uvicorn
 
-from .version import __version__, __timestamp__
+from .version import __timestamp__, __version__
+
 header = f"{__name__.split('.')[0]} v{__version__} {__timestamp__}"
+
+log_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 
 
 @click.command("contactform")
-@click.argument("to_address", type=str)
 @click.version_option(message=header)
 @click.option("-d", "--debug", is_flag=True, help="debug mode")
-def cli(debug):
+@click.option("-p", "--port", type=int, default="8080", help="listen port")
+@click.option(
+    "-l",
+    "--log-level",
+    default="INFO",
+    type=click.Choice(log_levels),
+    help=f"log level: {repr(log_levels)}",
+)
+def cli(debug, port, log_level):
     """email sender for a web page contact form"""
 
     def exception_handler(
@@ -26,9 +37,13 @@ def cli(debug):
 
     sys.excepthook = exception_handler
 
-    """cli for contactform."""
-    click.echo('contactform')
-    return 0
+    sys.exit(
+        uvicorn.run(
+            "contactform.app:app",
+            port=port,
+            log_level=log_level.lower(),
+        )
+    )
 
 
 if __name__ == "__main__":

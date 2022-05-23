@@ -34,9 +34,6 @@ def test_version():
 def test_command_line_interface():
     """Test the CLI."""
     runner = CliRunner()
-    result = runner.invoke(cli)
-    assert result.exit_code != 0, result
-    assert "contactform" in result.output
 
     result = runner.invoke(cli, ["--help"])
     assert result.exit_code == 0, result

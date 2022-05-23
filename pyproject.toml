@@ -22,21 +22,23 @@ classifiers = [
 dynamic = ["version", "description"] 
 
 dependencies = [
-  "click == 8.0.3"
+  "click >= 8.0.3",
+  "uvicorn >= 0.17.6",
+  "fastapi >= 0.78.0"
 ]
 
 [project.optional-dependencies]
 dev = [
-  "black==21.11b1",
-  "bump2version==1.0.1",
-  "coverage==6.2",
-  "flake8==4.0.1",
-  "pytest==6.2.5",
-  "tox==3.24.4"
+  "black>=21.11b1",
+  "bump2version>=1.0.1",
+  "coverage>=6.2",
+  "flake8>=4.0.1",
+  "pytest>=6.2.5",
+  "tox>=3.24.4"
 ]
 docs = [
-  "sphinx==4.3.2",
-  "sphinx-click==3.0.2"
+  "sphinx>=4.3.2",
+  "sphinx-click>=3.0.2"
 ]
 
 [project.urls]
