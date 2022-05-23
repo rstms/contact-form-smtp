@@ -15,6 +15,7 @@ log_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 @click.command("contactform")
 @click.version_option(message=header)
 @click.option("-d", "--debug", is_flag=True, help="debug mode")
+@click.option("-h", "--host", type=str, default="0.0.0.0", help="listen address")
 @click.option("-p", "--port", type=int, default="8080", help="listen port")
 @click.option(
     "-l",
@@ -23,7 +24,7 @@ log_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
     type=click.Choice(log_levels),
     help=f"log level: {repr(log_levels)}",
 )
-def cli(debug, port, log_level):
+def cli(debug, host, port, log_level):
     """email sender for a web page contact form"""
 
     def exception_handler(
@@ -40,6 +41,7 @@ def cli(debug, port, log_level):
     sys.exit(
         uvicorn.run(
             "contact_form_smtp.app:app",
+            host=host,
             port=port,
             log_level=log_level.lower(),
         )
