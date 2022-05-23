@@ -39,7 +39,7 @@ def cli(debug, port, log_level):
 
     sys.exit(
         uvicorn.run(
-            "contactform.app:app",
+            "contact_form_smtp.app:app",
             port=port,
             log_level=log_level.lower(),
         )
