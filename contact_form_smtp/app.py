@@ -8,6 +8,8 @@ app = FastAPI()
 @app.post("/contact/send")
 async def post_contact_send(request: Request):
     print(f"{request=}")
-    print(f"{request.query_params=}")
-    print(f"{request.path_params=}")
+    form_data = await request.form()
+    print(f"{form_data=}")
+    json_data = await request.json()
+    print(f"{json_data=}")
     return {"status": "ok"}
