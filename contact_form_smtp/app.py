@@ -5,6 +5,8 @@ from smtplib import SMTP
 
 from fastapi import FastAPI, Request
 
+from .settings import SMTP_SERVER
+
 app = FastAPI()
 
 
@@ -20,9 +22,8 @@ async def post_contact_send(request: Request, status_code=201):
     body = body.replace("</div>", "\n\n")
     message_date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
 
-    with SMTP("smtp") as smtp:
+    with SMTP(SMTP_SERVER) as smtp:
         smtp.set_debuglevel(1)
-        # smtp.connect('smtp', 25)
         msg = (
             f"From: {from_addr}\n"
             f"To: {to_addr}\n"
