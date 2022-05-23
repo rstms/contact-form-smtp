@@ -9,9 +9,11 @@ header = f"{__name__.split('.')[0]} v{__version__} {__timestamp__}"
 
 
 @click.command("contactform")
+@click.argument("to_address", type=str)
 @click.version_option(message=header)
 @click.option("-d", "--debug", is_flag=True, help="debug mode")
 def cli(debug):
+    """email sender for a web page contact form"""
 
     def exception_handler(
         exception_type, exception, traceback, debug_hook=sys.excepthook
@@ -25,7 +27,7 @@ def cli(debug):
     sys.excepthook = exception_handler
 
     """cli for contactform."""
-    raise RuntimeError("Add application code to contactform/cli.py")
+    click.echo('contactform')
     return 0
 
 
