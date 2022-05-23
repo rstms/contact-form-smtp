@@ -1,110 +1,107 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
 *$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
+.cache
+celerybeat.pid
+celerybeat-schedule
+*.cover
 .coverage
 .coverage.*
-.cache
-nosetests.xml
 coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
+db.sqlite3
+db.sqlite3-journal
+develop-eggs/
+.dist
+dist/
+# Distribution / packaging
 # Django stuff:
-*.log
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
+.dmypy.json
+dmypy.json
 docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
 # dotenv
+downloads/
+*.egg
+*.egg-info/
+.eggs/
+eggs/
 .env
-
-# virtualenv
-.venv
-venv/
+env/
 ENV/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
+env.bak/
+# Environments
+# Flask stuff:
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+htmlcov/
+.hypothesis/
+.idea/
+# IDE settings
+#   install all needed dependencies.
+.installed.cfg
+# Installer logs
+instance/
+.ipynb_checkpoints
+# IPython
+ipython_config.py
+# Jupyter Notebook
+lib/
+lib64/
+# locals
+local_settings.py
+*.log
+*.manifest
 # mkdocs documentation
-/site
-
+*.mo
 # mypy
 .mypy_cache/
-
-# IDE settings
-.vscode/
-.idea/
-
-# locals
-.dist
+nosetests.xml
+.nox/
+parts/
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+pip-delete-this-directory.txt
+# pipenv
+#Pipfile.lock
+pip-log.txt
+pip-wheel-metadata/
+*.pot
+profile_default/
+# PyBuilder
+__pycache__/
+*.py[cod]
+*.py,cover
+# pyenv
+# PyInstaller
+__pypackages__/
+.pyre/
+# Pyre type checker
+.pytest_cache/
+.Python
+.python-version
+.ropeproject
+# Rope project settings
+# SageMath parsed files
+*.sage.py
+.scrapy
+# Scrapy stuff:
+sdist/
+share/python-wheels/
+/site
+*.so
+*.spec
+# Sphinx documentation
+.spyderproject
+# Spyder project settings
+.spyproject
+target/
 .timestamp
+.tox/
+# Translations
+# Unit test / coverage reports
+#  Usually these files are written by a python script from a template
+var/
+.venv
+venv/
+venv.bak/
+# virtualenv
+.vscode/
+.webassets-cache
+wheels/
