@@ -6,7 +6,7 @@ requires_python = ">=3.8"
 
 
 [project]
-name = "contact_form_smtp"
+name = "contact-form-smtp"
 authors = [{name = "Matt Krueger", email = "mkrueger@rstms.net"}]
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}

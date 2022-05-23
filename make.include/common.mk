@@ -1,6 +1,7 @@
 # common - initialization, variables, functions
 
 project = contact_form_smtp
+repo = contract-form-smtp
 organization = rstms
 branch != git branch | awk '/\*/{print $$2}'
 version != awk <$(project)/version.py -F\" '/^__version__/{print $$2}'
