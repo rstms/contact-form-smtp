@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install contactform, run this command in your terminal:
+To install contact-form-smtp, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install contactform
+    $ pip install contact-form-smtp
 
-This is the preferred method to install contactform, as it will always install the most recent stable release.
+This is the preferred method to install contact-form-smtp, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for contactform can be downloaded from the `Github repo`_.
+The sources for contact-form-smtp can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/rstms/contactform
+    $ git clone git://github.com/rstms/contact-form-smtp
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/rstms/contactform/tarball/master
+    $ curl -OJL https://github.com/rstms/contact-form-smtp/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/rstms/contactform
-.. _tarball: https://github.com/rstms/contactform/tarball/master
+.. _Github repo: https://github.com/rstms/contact-form-smtp
+.. _tarball: https://github.com/rstms/contact-form-smtp/tarball/master

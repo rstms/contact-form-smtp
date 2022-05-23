@@ -6,7 +6,7 @@ requires_python = ">=3.8"
 
 
 [project]
-name = "contact-form-smtp"
+name = "contact_form_smtp"
 authors = [{name = "Matt Krueger", email = "mkrueger@rstms.net"}]
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
@@ -36,6 +36,7 @@ dev = [
 ]
 docs = [
   "sphinx>=4.3.2",
+  "sphinx-rtd-theme==1.0.0",
   "sphinx-click>=3.0.2"
 ]
 

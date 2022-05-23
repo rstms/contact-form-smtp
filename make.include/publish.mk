@@ -16,12 +16,12 @@ release_args = '{\
   "draft": false,\
   "prerelease": false\
 }'
-release_url = https://api.github.com/repos/$(organization)/$(repo)/releases
+release_url = https://api.github.com/repos/$(organization)/$(project)/releases
 release_header = -H 'Authorization: token ${GITHUB_TOKEN}'
 
 # create a github release from the current version
 release: dist 
-	@echo pushing Release $(repo) v$(version) to github...
+	@echo pushing Release $(project) v$(version) to github...
 	curl $(release_header) --data $(release_args) $(release_url)
 
 # publish to pypi
@@ -30,16 +30,16 @@ publish: release
 	@set -e;\
 	if [ "$(version)" != "$(pypi_version)" ]; then \
 	  $(call verify_action,publish to PyPi) \
-	  echo publishing $(repo) $(version) to PyPI...;\
+	  echo publishing $(package) $(version) to PyPI...;\
 	  flit publish;\
 	else \
-	  echo $(repo) $(version) is up-to-date on PyPI;\
+	  echo $(package) $(version) is up-to-date on PyPI;\
 	fi
 
 # check current pypi version 
 pypi-check:
 	$(call require_pypi_config)
-	@echo '$(repo) local=$(version) pypi=$(call check_pypi_version)'
+	@echo '$(project) local=$(version) pypi=$(call check_pypi_version)'
 
 # clean up publish generated files
 publish-clean:
@@ -51,7 +51,7 @@ define require_pypi_config =
 $(if $(wildcard ~/.pypirc),,$(error publish failed; ~/.pypirc required))
 endef
 
-pypi_version := $(shell pip install $(repo)==fnord.plough.plover.xyzzy 2>&1 |\
+pypi_version := $(shell pip install $(project)==fnord.plough.plover.xyzzy 2>&1 |\
   awk -F'[,() ]' '/^ERROR: Could not find a version .* \(from versions:.*\)/{print $$(NF-1)}')
 
 define check_null =

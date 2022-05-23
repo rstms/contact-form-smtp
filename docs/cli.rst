@@ -4,5 +4,5 @@ cli
 .. toctree::
    :maxdepth: 4
 
-.. click:: contactform:cli
+.. click:: contact_form_smtp:cli
   :prog: contactform

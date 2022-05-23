@@ -1,4 +1,4 @@
-Welcome to contactform's documentation!
+Welcome to contact_form_stmp's documentation!
 ======================================
 
 .. toctree::
