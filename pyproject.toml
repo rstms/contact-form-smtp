@@ -6,7 +6,7 @@ requires_python = ">=3.8"
 
 
 [project]
-name = "contactform"
+name = "contact_form_smtp"
 authors = [{name = "Matt Krueger", email = "mkrueger@rstms.net"}]
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
@@ -15,8 +15,6 @@ classifiers = [
   "Intended Audience :: Developers",
   "Natural Language :: English", 
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10"
 ]
 dynamic = ["version", "description"] 
@@ -42,7 +40,7 @@ docs = [
 ]
 
 [project.urls]
-Home = "https://github.com/rstms/contactform"
+Home = "https://github.com/rstms/contact-form-smtp"
 [tool.black]
 line-length = 79
 
@@ -53,4 +51,4 @@ collect_ignore = ['setup.py']
 
 
 [project.scripts]
-contactform = "contactform:cli"
+contactform = "contact_form_smtp:cli"

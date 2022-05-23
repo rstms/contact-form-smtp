@@ -22,7 +22,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-import contactform
+import contactform  # noqa: E402
 
 # -- General configuration ---------------------------------------------
 
